@@ -14,14 +14,13 @@ def gs(name):
         nonlocal name
         computer = random.choice("123")
         print(computer)
-        playerGuss =input(f"\n{name}  guss which number i'am thinking ... of ? 1, 2, or 3 \n")
+        playerGuss =input(f"\n{name} Guss which number i'am thinking ... of ? 1, 2, or 3 \nEnter Your choise : ")
 
         if playerGuss not in ["1", "2","3"]:
             print(f"{name} You must enter number between ... 1, 2, or 3")
             return playGs()
         
         player = int(playerGuss)
-        computer = random.choice("123")
         # print(computer)
         
         print(f"\n{name} you choose {player}")
@@ -51,7 +50,7 @@ def gs(name):
         print("\nPlay again ?")
 
         while True:
-            playagain = input("Y for yes, Q for quite ?")
+            playagain = input("Y for yes, Q for quite ? \nEnter Your choice : ")
             if playagain.lower() not in ["y","q"]:
                 continue
             else:
@@ -62,7 +61,10 @@ def gs(name):
         else:
             print("\n🎉🎉🎉🎉")
             print(f"{name} Thank you for playing!\n")
-            sys.exit("Bye! 👋")
+            if __name__ == "__main__":
+                sys.exit("Bye! 👋")
+            else:
+                return
         
         # print(name)
         # print(playerGuss)

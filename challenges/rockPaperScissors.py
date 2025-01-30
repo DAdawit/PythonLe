@@ -3,7 +3,7 @@ import random
 from enum import Enum
 
 
-def rps(name):
+def rps(name="PlayerOne"):
     game_count = 0
     player_wins = 0
     python_wins = 0
@@ -63,7 +63,7 @@ def rps(name):
         game_count += 1
 
         print(f"\nGame count: {str(game_count)}")
-        print(f"\n {name} wins: {str(player_wins)}")
+        print(f"\n{name} wins: {str(player_wins)}")
         print(f"\nPython wins: {str(python_wins)}")
 
         print("\nPlay again?")
@@ -78,12 +78,17 @@ def rps(name):
         if playagain.lower() == "y":
             return play_rps()
         else:
-            return
+            print("\n🎉🎉🎉🎉")
+            print(f"{name} Thank you for playing!\n")
+            if __name__ == "__main__":
+                sys.exit("Bye! 👋")
+            else:
+                return
 
     return play_rps
 
 
-rock_paper_scissors = rps()
+# rock_paper_scissors = rps()
 
 if __name__ == "__main__":
         import argparse
