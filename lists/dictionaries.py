@@ -15,6 +15,7 @@ print(len(user2))
 print(user['age'])
 print(user.get('name'))
 # list of keys
+print("####  dictionary keys ###")
 print(user.keys())
 print(user.values())
 
